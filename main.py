@@ -1,6 +1,4 @@
-#CSE 347 Project 1 Source Code
 #Nate Dean
-#March 11th, 2023
 
 #import statements
 import pandas as pd
@@ -57,10 +55,10 @@ def spectral(data, string):
     plt.show()
 
 #Run K-means and spectral clustering algorithms
-#k_means(square, "Square")
-#k_means(elliptical, "Elliptical")
-#spectral(square, "Square")
-#spectral(elliptical, "Elliptical")
+k_means(square, "Square")
+k_means(elliptical, "Elliptical")
+spectral(square, "Square")
+spectral(elliptical, "Elliptical")
 
 
 #Part 1 - Performance Analysis
@@ -81,8 +79,8 @@ def spectral_gk(data, gaussian, string):
     plt.ylabel('y')
     plt.show()
 
-#spectral_gk(square, af, "Square")
-#spectral_gk(elliptical, af1, "Elliptical")
+spectral_gk(square, af, "Square")
+spectral_gk(elliptical, af1, "Elliptical")
 
 #Cosine Similarity
 #perform spectral clustering using jaccard similarity matrix metric
@@ -99,8 +97,8 @@ def spectral_cosine(data, string):
     plt.ylabel('y')
     plt.show()
 
-#spectral_cosine(square, "Square")
-#spectral_cosine(elliptical, "Elliptical")
+spectral_cosine(square, "Square")
+spectral_cosine(elliptical, "Elliptical")
 
 
 ##Spectral Clustering Algorithm using Normalized Laplacian **
@@ -114,8 +112,8 @@ def spectral_norm_laplacian(data, string):
     plt.ylabel('y')
     plt.show()
 
-#spectral_norm_laplacian(square, "Square")
-#spectral_norm_laplacian(elliptical, "Elliptical")
+spectral_norm_laplacian(square, "Square")
+spectral_norm_laplacian(elliptical, "Elliptical")
 
 ##Spectral Clustering Algorithm using Unnormalized Laplacian **
 def spectral_un_laplacian(data, string):
@@ -128,8 +126,8 @@ def spectral_un_laplacian(data, string):
     plt.ylabel('y')
     plt.show()
 
-#spectral_un_laplacian(square, "Square")
-#spectral_un_laplacian(elliptical, "Elliptical")
+spectral_un_laplacian(square, "Square")
+spectral_un_laplacian(elliptical, "Elliptical")
 
 
 
@@ -175,8 +173,8 @@ def k_means_multi_dimensional(data, string, num_clusters):
     plt.ylabel('y')
     plt.show()
 
-#k_means_multi_dimensional(cho, "Cho", 5)
-#k_means_multi_dimensional(iyer_preprocessed, "Iyer Preprocessed", 10)
+k_means_multi_dimensional(cho, "Cho", 5)
+k_means_multi_dimensional(iyer_preprocessed, "Iyer Preprocessed", 10)
 
 
 #spectral clustering on real world datasets
@@ -190,8 +188,8 @@ def spectral_multi_dimensional(data, string, num_clusters):
     plt.ylabel('y')
     #plt.show()
 
-#spectral_multi_dimensional(cho, "Cho", 5)
-#spectral_multi_dimensional(iyer_preprocessed, "Iyer Preprocessed", 10)
+spectral_multi_dimensional(cho, "Cho", 5)
+spectral_multi_dimensional(iyer_preprocessed, "Iyer Preprocessed", 10)
 
 
 #Validate Results:
@@ -232,11 +230,11 @@ def spectral_validate_results(num_clusters, data, string):
     count = count * 100         #get percentage
     print("Spectral Accuracy for " + string + ": " + str(count))
 
-#kmeans_validate_results(5, cho, "Cho")
-#spectral_validate_results(5, cho, "Cho")
+kmeans_validate_results(5, cho, "Cho")
+spectral_validate_results(5, cho, "Cho")
 
-#kmeans_validate_results(10, iyer_preprocessed, "Iyer Preprocessed")
-#spectral_validate_results(10, iyer_preprocessed, "Iyer Preprocessed")
+kmeans_validate_results(10, iyer_preprocessed, "Iyer Preprocessed")
+spectral_validate_results(10, iyer_preprocessed, "Iyer Preprocessed")
 
 
 #Internal Index: Sum Squared Error (SSE)
@@ -264,11 +262,11 @@ def spectral_validate_results_sse(num_clusters, data, string):
     count = count / 100
     print("Spectral SSE for " + string + ": " + str(count))
 
-#kmeans_validate_results_sse(5, cho, "Cho")
-#spectral_validate_results_sse(5, cho, "Cho")
+kmeans_validate_results_sse(5, cho, "Cho")
+spectral_validate_results_sse(5, cho, "Cho")
 
-#kmeans_validate_results_sse(10, iyer_preprocessed, "Iyer Preprocessed")
-#spectral_validate_results_sse(10, iyer_preprocessed, "Iyer Preprocessed")
+kmeans_validate_results_sse(10, iyer_preprocessed, "Iyer Preprocessed")
+spectral_validate_results_sse(10, iyer_preprocessed, "Iyer Preprocessed")
 
 
 #Impacts of Data Normalization of K-Means and Spectral Clustering (Cho and Iyer preprocessed datasets)
@@ -301,14 +299,14 @@ def kmeans_validate_results_normalized(num_clusters, data, string):
     ac = ac * 100
     print("K-Means Accuracy for Normalized " + string + ": " + str(ac))
 
-#spectral_validate_results_normalized(5, cho, "Cho")
-#spectral_validate_results_normalized(10, iyer_preprocessed, "Iyer")
+spectral_validate_results_normalized(5, cho, "Cho")
+spectral_validate_results_normalized(10, iyer_preprocessed, "Iyer")
 
-#kmeans_validate_results_normalized(5, cho, "Cho")
-#kmeans_validate_results_normalized(10, iyer_preprocessed, "Iyer")
+kmeans_validate_results_normalized(5, cho, "Cho")
+kmeans_validate_results_normalized(10, iyer_preprocessed, "Iyer")
 
 
 #Impacts of Noise on Iyer dataset:
 #calculate accuracy scores for iyer RAW dataset and compare to iyer preprocessed
-#kmeans_validate_results(10, iyer, "Iyer")
-#spectral_validate_results(10, iyer, "Iyer")
+kmeans_validate_results(10, iyer, "Iyer")
+spectral_validate_results(10, iyer, "Iyer")
