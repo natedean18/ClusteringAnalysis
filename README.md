@@ -11,7 +11,7 @@ and visualize your results
 cosine similarity and Gaussian kernel similarity  
 • Present the performance analysis of the spectral clustering algorithm using different Laplacian matrices like
 unnormalized Laplacian and normalized symmetric Laplacian  
-  
+
 Tasks for Real-World Datasets:  
 • Use k-means and spectral clustering algorithms to find clusters of genes on Cho and Iyer datasets which
 exhibit similar expression profiles. Note that there are some noise samples in Iyer dataset where a label of
