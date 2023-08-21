@@ -1,16 +1,16 @@
 # ClusteringAnalysis
 Datasets Used:
-• Simulation Datasets: Square and Elliptical
-• Real-Word Datasets: Cho and Iyer (two gene sequences datasets)
+• Simulation Datasets: Square and Elliptical__
+• Real-Word Datasets: Cho and Iyer (two gene sequences datasets)__
 
 
-Tasks for Simulation Datasets:
+Tasks for Simulation Datasets:__
 • Implement k-means and spectral clustering algorithms to find 2 clusters on Square and Elliptical datasets
-and visualize your results
+and visualize your results__
 • Present the performance analysis of the spectral clustering algorithm using different similarity measures like
-cosine similarity and Gaussian kernel similarity
+cosine similarity and Gaussian kernel similarity__
 • Present the performance analysis of the spectral clustering algorithm using different Laplacian matrices like
-unnormalized Laplacian and normalized symmetric Laplacian
+unnormalized Laplacian and normalized symmetric Laplacian__
 
 Tasks for Real-World Datasets:
 • Use k-means and spectral clustering algorithms to find clusters of genes on Cho and Iyer datasets which
